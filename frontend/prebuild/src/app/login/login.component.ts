@@ -268,6 +268,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.pane = 'center';
     document.getElementById('signin').innerHTML = 'Sign In As Guest';
   }
+  
+  button() {
+    console.log("hi");
+   }
 
   setQueueOnMessage() {
     LoginComponent.queueCallback.onmessage = msg => {
@@ -318,6 +322,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (await this.createUser(username, sessionStorage.getItem('userId'))) {
       this.pane = 'right';
     }
+  }
+  
+  async runAI(ai1: string, ai2: string, ai3: string, ai4: string) {
+     console.log(ai1);
   }
 
   async getPlayerId(jwt: string) {

@@ -12,6 +12,7 @@ import { trigger, state, style, transition, animate, query, group } from '@angul
       state('center', style({ transform: 'translateX(-25%)' })),
       state('right', style({ transform: 'translateX(-50%)' })),
       state('queue', style({ transform: 'translateX(-75%)'})),
+      state('ai', style({ transform: 'translateX(25%)'})),
       transition('void => *', animate(0)),
       transition('* => *', animate(300))
     ]),
@@ -30,4 +31,4 @@ export class SliderComponent {
   }
 }
 
-export type PaneType = 'left' | 'center' | 'right' | 'queue';
+export type PaneType = 'left' | 'center' | 'right' | 'queue' | 'ai';

@@ -43,10 +43,13 @@
             <div *ngIf="isFullDevice" class="form-item">
               <button type="button" (click)="hostRound()" [disabled]="isPerformingSsoRedirect">Host Round</button>
             </div>
+            <div *ngIf="isFullDevice" class="form-item">
+              <button type="button" (click)="hostAIRound()" [disabled]="isPerformingSsoRedirect">Host AI Round</button>
+            </div>
           </div>
         </div>
 
-
+ 
         <div centerPane>
           <form (submit)="loginAsGuest(username)">
             <div class="form-group">
@@ -112,6 +115,39 @@
             </div>
           </div>
         </div>
+        
+        <div aiPane>
+          <div class="form-group">
+            <div class="form-item">
+ 
+              <div class="form-item">
+                <label>ai1</label>
+                <input type="text" id="ai1" name="ai1" [(ngModel)]="ai1" />
+              </div>
+              <div class="form-item">
+                <label>ai2</label>
+                <input type="text" id="ai2" name="ai2" [(ngModel)]="ai2" />
+              </div>
+              <div class="form-item">
+                <label>ai3</label>
+                <input type="text" id="ai3" name="ai3" [(ngModel)]="ai3" />
+              </div>
+              <div class="form-item">
+                <label>ai4</label>
+                <input type="text" id="ai4" name="ai4" [(ngModel)]="ai4" />
+              </div>
+
+              <div class="form-item">
+                <button type="submit" id="runAI" (click)="runAI(ai1, ai2, ai3, ai4)">Run AI Game</button>
+              </div>
+               <div class="form-item">
+                <button type="submit" id="dothat" (click)="button()">button</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
       </app-slider>
     </div>
   </div>
